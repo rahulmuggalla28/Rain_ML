@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Prediction</title>
+</head>
+<body>
+    <h1>Rain Prediction</h1>
+    <form method="post" action="/predict">
+        <label>Location :</label>
+        <select name="location" required>
+            <option value="0">London</option>
+            <option value="1">Paris</option>
+            <option value="2">New York</option>
+            <option value="3">Tokyo</option>
+            <option value="4">Beijing</option>
+            <option value="5">Istanbul</option>
+            <option value="6">Moscow</option>
+            <option value="7">Berlin</option>
+            <option value="8">Bangkok</option>
+            <option value="9">Seoul</option>
+            <option value="10">Mumbai</option>
+            <option value="11">Rome</option>
+            <option value="12">Madrid</option>
+            <option value="13">Mexico City</option>
+            <option value="14">Shanghai</option>
+            <option value="15">Rio de Janeiro</option>
+            <option value="16">Los Angeles</option>
+            <option value="17">Buenos Aires</option>
+            <option value="18">Sydney</option>
+            <option value="19">Johannesburg</option>
+        </select> <br><br>
+
+        <label for="temp">Temperature (C):</label>
+        <input type="number" id="temp" name="temp"><br><br>
+
+        <label for="min_temp">Minimum Temperature (C):</label>
+        <input type="number" id="min_temp" name="min_temp"><br><br>
+
+        <label for="max_temp">Maximum Temperature (C):</label>
+        <input type="number" id="max_temp" name="max_temp"><br><br>
+
+        <label for="wind_dir">Wind Direction:</label>
+        <input type="number" name="wind_dir" id="wind_dir"><br><br>
+
+        <label for="wind_speed">Wind Speed (m/s):</label>
+        <input type="number" id="wind_speed" name="wind_speed"><br><br>
+
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" id="humidity" name="humidity"><br><br>
+
+        <label for="pressure">Pressure (hPa):</label>
+        <input type="number" id="pressure" name="pressure"><br><br>
+
+        <label for="cloud">Cloud (%):</label>
+        <input type="number" id="cloud" name="cloud"><br><br>
+
+        <label for="today_rain">Today Rain:</label>
+        <select name="today_rain" id="today_rain">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    <p>{{prediction}}</p>
+</body>
+</html>
